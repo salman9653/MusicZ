@@ -11,41 +11,68 @@ body {
 }
 nav {
   font-family: "Nunito", sans-serif;
+  position: sticky;
+  top: 0;
 }
 nav ul {
-  padding: 5px 5%;
+  padding: 5px 10%;
   display: flex;
   align-items: center;
   list-style-type: none;
-  height: 65px;
-  background-color: black;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
   color: aliceblue;
 }
 nav ul li {
+  font-size: 13px;
   padding: 0 20px 0 0;
 }
 .brand {
+  color: rgb(127, 255, 148);
   display: flex;
   align-items: center;
-  margin: 0 30px 0 0;
+  margin-right: 25px;
 }
 .brand h1 {
-  color: rgb(127, 255, 148);
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
-.brand img {
-  width: 45px;
-  margin: 0 10px 0 0;
+.brand i {
+  margin-right: 12px;
 }
+
 .container {
-  min-height: 70vh;
+  min-height: 77vh;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+.bannar {
+  padding: 20px 15vw;
+  display: flex;
+  align-items: center;
+  background-color: rgb(10, 10, 10);
+}
+.bannar img {
+  width: 150px;
+  margin-right: 3%;
+}
+.bannar h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.bannar p {
+  margin: 15px;
+  width: 70%;
+  font-size: smaller;
 }
 
 .player {
-  position: static;
-  bottom: 0;
-  height: 100px;
-  background-color: black;
+  padding-top: 15px;
+  position: sticky;
+  bottom: 0px;
+  background-color: rgb(20, 20, 20);
   color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -53,9 +80,20 @@ nav ul li {
   align-items: center;
 }
 #progressBar {
-  width: 80vw;
+  width: 70vw;
+  height: 4px;
 }
 .icons {
   display: flex;
   align-items: center;
+  margin: 15px 0;
+}
+.media {
+  display: flex;
+  align-items: center;
+  margin: 0 5vw;
+}
+.icons i {
+  margin: 0 2vw;
+  cursor: pointer;
 }
