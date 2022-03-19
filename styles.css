@@ -28,7 +28,7 @@ nav ul li {
   padding: 0 20px 0 0;
 }
 .brand {
-  color: rgb(127, 255, 148);
+  color: #1ed760;
   display: flex;
   align-items: center;
   margin-right: 25px;
@@ -41,7 +41,7 @@ nav ul li {
 }
 
 .container {
-  min-height: 77vh;
+  height: 100vh;
   background-color: black;
   color: aliceblue;
   display: flex;
@@ -52,24 +52,76 @@ nav ul li {
   display: flex;
   align-items: center;
   background-color: rgb(10, 10, 10);
+  font-family: "Nunito", sans-serif;
 }
 .bannar img {
   width: 150px;
   margin-right: 3%;
 }
 .bannar h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .bannar p {
-  margin: 15px;
+  margin: 10px;
   width: 70%;
-  font-size: smaller;
+  font-size: 14px;
+}
+.songList {
+  width: 80%;
+  margin: 0 auto;
+}
+.songItemTitle {
+  margin: 10px 0;
+  padding: 10px 0 10px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(20, 20, 20);
+}
+.songItem {
+  margin-top: 5px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.songItem:hover {
+  background-color: rgb(30, 30, 30);
+}
+.songItem img,
+.songItemTitle Img {
+  width: 40px;
+  margin: 5px 20px;
+  border-radius: 50%;
+}
+.songNo {
+  text-align: center;
+  width: 2vw;
+}
+.songTitle {
+  width: 30vw;
+}
+.songArtist {
+  width: 20vw;
+}
+.songAlbum {
+  width: 15vw;
+}
+.songTime {
+  width: 10vw;
+  text-align: center;
+}
+.songPlay {
+  width: 10vw;
+  text-align: center;
+}
+.songPlay i {
+  cursor: pointer;
+  color: #1ed760;
 }
 
 .player {
-  padding-top: 15px;
   position: sticky;
   bottom: 0px;
   background-color: rgb(20, 20, 20);
@@ -79,14 +131,39 @@ nav ul li {
   justify-content: center;
   align-items: center;
 }
+.playing {
+  position: absolute;
+  left: 3%;
+  display: flex;
+  align-items: center;
+}
+.playing img {
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.playingInfo {
+  display: flex;
+  flex-direction: column;
+}
+.playingTitle {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.playingArtist {
+  font-size: 12px;
+}
+
 #progressBar {
-  width: 70vw;
+  margin-top: 20px;
+  width: 50vw;
   height: 4px;
 }
 .icons {
   display: flex;
   align-items: center;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .media {
   display: flex;
