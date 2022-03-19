@@ -159,6 +159,7 @@ nav ul li {
   margin-top: 20px;
   width: 50vw;
   height: 4px;
+  cursor: pointer;
 }
 .icons {
   display: flex;
