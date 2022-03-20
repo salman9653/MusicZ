@@ -6,7 +6,7 @@ font-family: 'Varela Round', sans-serif; */
   padding: 0;
 }
 body {
-  background-color: antiquewhite;
+  background-color: black;
   font-family: "Varela Round", sans-serif;
 }
 nav {
@@ -41,8 +41,6 @@ nav ul li {
 }
 
 .container {
-  height: 100vh;
-  background-color: black;
   color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -57,6 +55,7 @@ nav ul li {
 .bannar img {
   width: 15%;
   margin-right: 3%;
+  border-radius: 10px;
 }
 .bannar h1 {
   font-size: 2rem;
@@ -69,7 +68,7 @@ nav ul li {
 }
 .songList {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 2vh auto;
 }
 .songItemTitle {
   margin: 10px 0;
@@ -121,9 +120,12 @@ nav ul li {
 }
 
 .player {
+  margin: 0 3vw;
+  border-radius: 20px;
   position: sticky;
-  bottom: 0px;
-  background-color: rgb(20, 20, 20);
+  bottom: 10px;
+  background-color: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
   color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -135,11 +137,35 @@ nav ul li {
   left: 3%;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
-.playing img {
+
+/* The animation code */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  /* 25% {
+    transform: rotate(90deg);
+  } */
+  50% {
+    transform: rotate(180deg);
+  }
+  /* 75% {
+    transform: rotate(270deg);
+  } */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.playingCover {
   height: 65px;
   border-radius: 50%;
   margin-right: 20px;
+}
+.playingCover:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }
 .playingInfo {
   display: flex;
@@ -156,7 +182,7 @@ nav ul li {
 
 #progressBar {
   margin-top: 20px;
-  width: 50vw;
+  width: 40vw;
   height: 4px;
   cursor: pointer;
 }
@@ -168,9 +194,9 @@ nav ul li {
 .media {
   display: flex;
   align-items: center;
-  margin: 0 5vw;
+  margin: 0 2vw;
 }
 .icons i {
-  margin: 0 2vw;
+  margin: 0 1.5vw;
   cursor: pointer;
 }
