@@ -51,6 +51,7 @@ nav ul li {
   align-items: center;
   background-color: rgb(10, 10, 10);
   font-family: "Nunito", sans-serif;
+  position: relative;
 }
 .bannar img {
   width: 15%;
@@ -195,6 +196,9 @@ nav ul li {
   display: flex;
   align-items: center;
   margin: 0 2vw;
+}
+#masterPlay {
+  color: #1ed760;
 }
 .icons i {
   margin: 0 1.5vw;

@@ -7,29 +7,32 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 let playingTitle = document.querySelector('.playingTitle');
 
 let songs = [
-    { id: 1, songName: 'Warriyo - Mortals', filePath: './songs/1.mp3', coverPath: './covers/1.jpg' },
-    { id: 2, songName: 'Cielo - Huma-Huma', filePath: './songs/2.mp3', coverPath: './covers/2.jpg' },
-    { id: 3, songName: 'Seaf Kev - Invincible', filePath: './songs/3.mp3', coverPath: './covers/3.jpg' },
-    { id: 4, songName: 'Different Heaven - My Heart', filePath: './songs/4.mp3', coverPath: './covers/4.jpg' },
-    { id: 5, songName: 'Janji-Heroes-Tonight', filePath: './songs/5.mp3', coverPath: './covers/5.jpg' },
-    { id: 6, songName: 'Song6', filePath: './songs/6.mp3', coverPath: './covers/6.jpg' },
-    { id: 7, songName: 'Son7', filePath: './songs/7.mp3', coverPath: './covers/7.jpg' },
-    { id: 8, songName: 'Song8', filePath: './songs/8.mp3', coverPath: './covers/8.jpg' },
-    { id: 9, songName: 'Song9', filePath: './songs/9.mp3', coverPath: './covers/9.jpg' },
-    { id: 10, songName: 'Song10', filePath: './songs/10.mp3', coverPath: './covers/10.jpg' },
+    { id: 1, songName: 'Warriyo - Mortals', filePath: './songs/1.mp3', coverPath: './covers/1.jpg', album: 'NCS', artist: '-', duration: '3:50' },
+    { id: 2, songName: 'Cielo - Huma-Huma', filePath: './songs/2.mp3', coverPath: './covers/2.jpg', album: 'NCS', artist: '-', duration: '2:23' },
+    { id: 3, songName: 'Seaf Kev - Invincible', filePath: './songs/3.mp3', coverPath: './covers/3.jpg', album: 'NCS', artist: '-', duration: '4:33' },
+    { id: 4, songName: 'Different Heaven - My Heart', filePath: './songs/4.mp3', coverPath: './covers/4.jpg', album: 'NCS', artist: '-', duration: '4:27' },
+    { id: 5, songName: 'Janji-Heroes-Tonight', filePath: './songs/5.mp3', coverPath: './covers/5.jpg', album: 'NCS', artist: '-', duration: '3:28' },
+    { id: 6, songName: 'Warriyo - Mortals', filePath: './songs/1.mp3', coverPath: './covers/6.jpg', album: 'NCS', artist: '-', duration: '3:50' },
+    { id: 7, songName: 'Cielo - Huma-Huma', filePath: './songs/2.mp3', coverPath: './covers/7.jpg', album: 'NCS', artist: '-', duration: '2:23' },
+    { id: 8, songName: 'Seaf Kev - Invincible', filePath: './songs/3.mp3', coverPath: './covers/8.jpg', album: 'NCS', artist: '-', duration: '4:33' },
+    { id: 9, songName: 'Different Heaven - My Heart', filePath: './songs/4.mp3', coverPath: './covers/9.jpg', album: 'NCS', artist: '-', duration: '4:27' },
+    { id: 10, songName: 'Janji-Heroes-Tonight', filePath: './songs/5.mp3', coverPath: './covers/10.jpg', album: 'NCS', artist: '-', duration: '3:28' }
+
 ]
 
 songItems.forEach((element, i) => {
     element.getElementsByClassName('songNo')[0].innerText = songs[i].id;
     element.getElementsByTagName('img')[0].src = songs[i].coverPath;
     element.getElementsByClassName('songTitle')[0].innerText = songs[i].songName;
+    element.getElementsByClassName('songArtist')[0].innerText = songs[i].artist;
+    element.getElementsByClassName('songAlbum')[0].innerText = songs[i].album;
+    element.getElementsByClassName('songTime')[0].innerText = songs[i].duration;
 })
 
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime === 0) {
         audioElement.play();
         masterPlay.classList.remove('fa-circle-play');
-        playingCover.src = `./covers/1.jpg`;
         masterPlay.classList.add('fa-circle-pause');
         playingCover.src = `./covers/${songIndex}.jpg`;
         playingCover.style.animation = "rotate 5s infinite linear";
